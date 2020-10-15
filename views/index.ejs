@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width:device-width" />
+    <title>Hack2020 Registration</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+          <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/regstyle.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <h2><a href="/hack2020">Hack2020</a></h2>
+      </div>
+      <nav>
+        <ul class="nav-links" >
+          <li class="nav-links">
+          <a href="/regform"><i class="fas fa-home" style="font-size:15px;"></i>Home</a>
+          </li>
+          <li class="nav-links">
+          <a href="#eventdetails"><i class="fas fa-user" style="font-size:15px;"></i>Event Details</a>
+          </li>
+          <li class="nav-links">
+            <a href="#regform"><i class="fas fa-calendar-check" style="font-size:15px;"></i>Registration Form</a>
+          </li>
+          <li class="nav-links">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Check Regdetails</button>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Enter RegNo to Check Your Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="/registrationdetailsopen">
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Registration Number</label>
+                <input type="text" class="form-control" name="regno" id="regno">
+              </div>
+              <button type="submit" class="btn btn-primary" id="mybtn3">Check</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <video src="/videos/eventback.mp4" autoplay muted loop poster="posterimage.jpg">
+
+    </video>
+    <div class="curved">
+
+      <div class="jumbotron text-center jumbotron-fluid">
+
+        <p style="font-weight:bold; font-size:30px; text-transform:uppercase; word-spacing:5px;">Register your favoruite event and <br>win exclusive prizes</p>
+        <img src="/images/front.png" alt="" width="400px" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="1500">
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#fff" fill-opacity="1" d="M0,0L80,21.3C160,43,320,85,480,112C640,139,800,149,960,128C1120,107,1280,53,1360,26.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+    <a href="#" name="eventdetails"></a>
+    <p class="top-heading">Events awaiting for you</p>
+
+    <div class="row justify-content-around">
+
+        <div class="card" style="width: 20rem;" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="linear">
+          <img src="/images/web.png" alt="" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Front End</h5>
+            <p class="card-text">Take your own Theme to Develop Complete Responsive UX design</p>
+            <p class="card-text high"><span>Date:</span> 10-June-2020</p>
+            <p class="card-text high"><span>Time:</span> 9AM to 9PM</p>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem; " data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="linear">
+          <img src="/images/python.png" alt="" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">Consists of 4 coding rounds top 50 will be selected and certified</p>
+            <p class="card-text high"><span>Date:</span> 11-June-2020</p>
+            <p class="card-text high"><span>Time:</span> Event starts from 9AM each round take 2hrs</p>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="linear">
+          <img src="/images/js.png" alt="" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">JavaScript</h5>
+            <p class="card-text">Consists of 4 coding rounds top 50 will be selected and certified</p>
+            <p class="card-text high"><span>Date:</span> 12-June-2020</p>
+            <p class="card-text high"><span>Time:</span> Event starts from 9AM each<br> round take 2hrs</p>
+          </div>
+        </div>
+
+
+    </div><br>
+    <hr>
+    <a href="#" name="regform"></a>
+    <p class="top-heading">Events Registration Form</p>
+    <p class="failure"><%= failuremessage %></p>
+    <div class="container" data-aos="fade-right"  data-aos-offset="300"
+     data-aos-easing="linear" style="background: rgba(0, 0, 0, 0.5);box-shadow:none;">
+      <form action="/register"  method="post" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputName" style="color:white;">Name</label>
+          <input type="text" name="username" class="form-control" value="" placeholder="A John" id="name" oninput="GetDisplay()">
+          <small  class="form-text text-muted">* Enter your Full name</small>
+        </div>
+
+
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4" style="color:white;">Email</label>
+          <input type="email" name="email" class="form-control" id="email" oninput="GetDisplay()" placeholder="xyz@gmail.com">
+            <small  class="form-text text-muted">*Enter Your valid email id</small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputContact" style="color:white;">Contact</label>
+          <input type="text" name="number" class="form-control"  id="contact" oninput="GetDisplay()" placeholder="7894521**" pattern="[0-9]{10}"
+maxlength="10">
+            <small  class="form-text text-muted">* Enter your 10 digit mobile number</small>
+        </div>
+      </div><br>
+      <label style="color:white;">Upload Your ID_card</label><br>
+ <input type='file' name='myimage' onchange="showImage.call(this)">
+  <br>
+ <small class="form-text text-muted">*upload ur orginal id card</small>
+  <br>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputRegister" style="color:white;">Registration Type</label>
+          <select name="regtype"  id="regtype" oninput="GetDisplay()" class="form-control">
+            <option value="self">Self</option>
+            <option value="group">Group</option>
+            <option value="corporate">Corporate</option>
+            <option value="others">others</option>
+
+          </select>
+            <small  class="form-text text-muted">* Select your kind of registration</small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEvent" style="color:white;">Event Type</label>
+          <select name="eventtype" id="eventtype" oninput="GetDisplay()"  class="form-control">
+          <option value="front-end">front-end</option>
+
+          <option value="python">python</option>
+          <option value="javascript">javascript</option>
+
+          </select>
+            <small  class="form-text text-muted">* Select Event you are wise to participate</small>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputNumber" style="color:white;">Ticket</label>
+          <input type="text" name="ticket" class="form-control"  id="ticket" oninput="GetDisplay()" placeholder="Members" pattern="[0-9]" maxlength="2">
+            <small  class="form-text text-muted">* Tickets will be provided based on members</small>
+        </div>
+      </div>
+      <div class="form-row">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Preview</button>
+        <button type="submit" class="btn btn-primary" style="margin-left:50px" id="mybtn">Register</button>
+      </div>
+
+
+    </form>
+    </div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+      <div class="modal-content" style="width:100%; height:auto; padding:10px;">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Check Your Details Before Submit</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="form-inline">
+    <div class="form-group">
+      <label for="Name">Full Name:</label>
+      <p class="m-p" id="name_value"></p>
+    </div>
+  </div>
+  <div class="form-inline">
+  <div class="form-group">
+  <label for="inputEmail4">Email:</label>
+  <p class="m-p" id="email_value"></p>
+  </div>
+  </div>
+  <div class="form-inline">
+  <div class="form-group">
+  <label for="inputContact">Contact No:</label>
+  <p class="m-p" id="contact_value"></p>
+  </div>
+  </div>
+  <div class="form-inline">
+  <div class="form-group">
+  <label for="inputReg">Registration:</label>
+  <p class="m-p" id="reg_value"></p>
+  </div>
+  </div>
+  <div class="form-inline">
+  <div class="form-group">
+  <label for="inputEvent">Event:</label>
+  <p class="m-p" id="event_value"></p>
+  </div>
+  </div>
+  <div class="form-inline">
+  <div class="form-group">
+  <label for="inputticket">Ticket:</label>
+  <p class="m-p" id="ticket_value"></p>
+  </div>
+  </div>
+  <div class="form-inline inn">
+  <div class="form-group fgg">
+
+  <img src="" alt="" width="200px" id="image">
+  </div>
+  </div>
+
+
+
+    </div>
+
+    </div>
+    </div>
+  </div>
+
+  <br>
+  <hr>
+<p class="top-heading">If any queries ask here</p>
+<div class="container" style="width:50%;background: rgba(0, 0, 0, 0.5);box-shadow:none;" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" >
+  <form method="post" action="/queries" >
+  <div class="form-group">
+    <label for="exampleFormControlInput1" style="color:white;">Email address</label>
+    <input type="email" class="form-control" id="email1" name="email" placeholder="name@gmail.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1" style="color:white;">Doubts</label>
+    <textarea class="form-control" id="text1" rows="3" name="text"></textarea>
+  </div>
+  <button type="submit" name="button" class="btn btn-primary" id="mybtn1">Sent</button>
+</form>
+
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/home.js" charset="utf-8"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/150475fcb8.js" crossorigin="anonymous"></script>
+        <script src="/js/snbutton.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

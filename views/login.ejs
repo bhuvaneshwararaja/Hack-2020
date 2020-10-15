@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AdminLogin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/regstyle.css">
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+  <source src="/videos/webback.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+    <div class="container" style="width: 30rem; margin-top:70px; position:relative;background: rgba(0, 0, 0, 0.5);box-shadow:none;">
+  <img src="/images/login.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <form method="post" action="/adminlogin">
+  <div class="form-group">
+    <label for="exampleInputEmail1" style="color:white">User Name</label>
+    <input type="Text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="color:white;">Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary">Login</button>
+</form>
+  </div>
+</div>
+
+    <script>
+      function LoginFirst(){
+        alert("please login first");
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

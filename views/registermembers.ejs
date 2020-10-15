@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RegisterDetail</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+
+      <div class="outer">
+        <div class="inner-det">
+
+                         <p><span>Registration_no : </span><%= onereg.reg%></p>
+                            <p><span>Full_name :</span> <%= onereg.name %></p>
+                              <p><span>contact_no :</span> <%= onereg.contact %></p>
+                                <p><span>Email :</span> <%= onereg.email %></p>
+                                  <p><span>Reg_Type :</span> <%= onereg.type %></p>
+                                  <p><span>event :</span> <%= onereg.event_type %></p>
+                                    <p><span>No_of_tickets :</span> <%= onereg.ticket %></p>
+                                    <p><span>Registration_Date :</span> <%= onereg.date %></p>
+        </div>
+        <div class="inner-im">
+          <p><span>ID_Card:</span></p><br>
+                  <img src="<%=onereg.image%>" alt="" width="300px">
+        </div>
+      </div>
+
+        </div>
+
+  </body>
+
+</html>
