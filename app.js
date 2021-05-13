@@ -45,7 +45,7 @@ cloudinary.config({
   api_key:  '',
   api_secret: ''
 });
-mongoose.connect("mongodb+srv://bhuvan:bhuvanesh007@cluster0-lzpan.mongodb.net/Eventregistration",{ useNewUrlParser: true , useUnifiedTopology: true,useFindAndModify:false  });
+mongoose.connect("your db ",{ useNewUrlParser: true , useUnifiedTopology: true,useFindAndModify:false  });
 mongoose.set("useCreateIndex", true);
 const regSchema = new mongoose.Schema({
   reg:String,
